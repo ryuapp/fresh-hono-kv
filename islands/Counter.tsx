@@ -7,13 +7,13 @@ const client = hc<AppType>("/");
 
 async function getCount() {
   const res = await client.api.count.$get();
-  
+
   return await res.json();
 }
 async function postCount(count: number) {
-  const body = {"json":{ count }}
+  const body = { "json": { count } };
   const res = await client.api.count.$post(body);
-  
+
   return await res.json();
 }
 
