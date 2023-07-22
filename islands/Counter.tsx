@@ -11,7 +11,7 @@ async function getCount() {
   return await res.json();
 }
 async function postCount(count: number) {
-  const body = JSON.stringify({ count });
+  const body = {"json":{ count }}
   const res = await client.api.count.$post(body);
   
   return await res.json();
